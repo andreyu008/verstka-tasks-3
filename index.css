@@ -1,0 +1,36 @@
+table{
+    width: 100%;
+    border: 4px double black;
+    border-collapse: separate;
+    border-spacing: 4px 4px;
+    table-layout: auto;
+}
+td, td:hover:after{
+    width: 50px;
+}
+td:hover{
+    padding: 5px;
+    border: 2px solid black;
+    text-align: right;
+    background: #ffc;
+}
+td:hover:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #362f6c;
+    z-index: -1;
+}
+tr:hover{
+    background: #362f6c;
+    color: rgba(64, 255, 6, 1);
+}
+thead:hover{
+    background: blue;
+    color: brown;
+
+}
+
+
