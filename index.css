@@ -1,36 +1,51 @@
-table{
-    width: 100%;
-    border: 4px double black;
-    border-collapse: separate;
-    border-spacing: 4px 4px;
-    table-layout: auto;
+table {
+    overflow: hidden;
 }
-td, td:hover:after{
-    width: 50px;
+
+td, th {
+    padding: 10px;
+    position: relative;
+    outline: 0;
 }
-td:hover{
-    padding: 5px;
-    border: 2px solid black;
-    text-align: right;
-    background: #ffc;
+
+body:not(.nohover) tbody tr:hover {
+    background-color: #ffa;
 }
-td:hover:after{
+
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after {
     content: '';
-    display: block;
+    height: 10000px;
+    left: 0;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    background: #362f6c;
+    top: -5000px;
+    width: 100%;
     z-index: -1;
 }
-tr:hover{
-    background: #362f6c;
-    color: rgba(64, 255, 6, 1);
-}
-thead:hover{
-    background: blue;
-    color: brown;
 
+td:hover::after,
+th:hover::after {
+    background-color: #ffa;
 }
 
+td:focus::after,
+th:focus::after {
+    background-color: lightblue;
+}
 
+td:focus::before,
+tbody th:focus::before {
+    background-color: lightblue;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: -5000px;
+    position: absolute;
+    width: 10000px;
+    z-index: -1;
+}
+tr:nth-child(2n){
+    background-color: #afafaf;
+}
