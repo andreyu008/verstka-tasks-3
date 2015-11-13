@@ -13,17 +13,15 @@
             value=""
             onkeyup="this.setAttribute('value', this.value)">
     <table>
-        <thead>
         <tr>
-            <td>Авиакомпания</td>
-            <td>Логотип</td>
-            <td>Номер рейса</td>
-            <td>Тип ВС</td>
-            <td>Направление</td>
-            <td>Время вылета/прилёта</td>
-            <td>Статус рейса</td>
+            <th>Авиакомпания</th>
+            <th>Логотип</th>
+            <th>Номер рейса</th>
+            <th>Тип ВС</th>
+            <th>Направление</th>
+            <th>Время вылета/прилёта</th>
+            <th>Статус рейса</th>
         </tr>
-        </thead>
         <tr>
             <td>Pegas Fly</td>
             <td><img src="177.gif"></td>
@@ -151,5 +149,13 @@
             <td>В пути</td>
         </tr>
     </table>
+        <p>Введите ваши данные:</p>
+    <form>
+        <label for="email">Введите ваш email</label>
+        <input id="email" type="email" pattern="^[A-Za-z][A-Za-z0-9-_.]*@[A-Za-z][A-Za-z0-9-_]*(\.[A-Za-z][A-Za-z0-9-_]+*){1,5}$">
+        <label for="phone">Ваш телефон</label>
+        <input placeholder="Введите ваш номер" id="phone" type="tel" pattern="^\d{11}$">
+        <input type="submit">
+    </form>
     </body>
 </html>

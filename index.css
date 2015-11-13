@@ -1,11 +1,11 @@
 table {
-    overflow: hidden;
+    width: 100%;
+    border-spacing: 0px 0px;
 }
 
 td, th {
     padding: 10px;
     position: relative;
-    outline: 0;
 }
 
 body:not(.nohover) tbody tr:hover {
